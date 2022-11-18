@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      logo: ["Dancing Script"],
+    }
   },
   plugins: [],
 }

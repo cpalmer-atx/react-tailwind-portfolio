@@ -8,14 +8,14 @@ import Contact from './components/Contact'
 
 const App = () => {
   return (
-    <>
+    <div className='h-screen w-full bg-gradient-to-b from-primary via-primary to-secondary text-primaryTxt'>
       <Navbar />
-      <Home />
+      {/* <Home />
       <About />
       <Experience />
       <Projects />
-      <Contact />
-    </>
+      <Contact /> */}
+    </div>
   )
 }
 

@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     // <div className="relative">
-    <nav className="fixed z-20 container mx-auto p-6 max-w-full bg-gradient-to-tr from-primary via-primary to-secondary">
+    <nav className="fixed z-20 container mx-auto p-6 max-w-full bg-gradient-to-tl from-primary via-primary to-secondary">
       <div className="flex items-center mx-auto justify-between max-w-5xl">
         <div>
           <Link to='home' smooth duration={700}>

@@ -36,7 +36,7 @@ const Navbar = () => {
         { nav && (
           <ul className="flex flex-col md:hidden z-10 justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-tr from-primary via-primary to-secondary text-primaryTxt">
             <Link to='home' onClick={() => setNav(!nav)} smooth duration={700}>
-              <h1 className="text-4xl py-3 my-4 px-10 border-b-2 cursor-pointer hover:text-secondaryTxt border-primaryTxt font-logo text-transparent bg-clip-text bg-gradient-to-bl from-primaryTxt via-primaryTxt to-secondaryTxt">C.Palmer</h1>
+              <h1 className="text-4xl py-3 my-4 px-10 border-b-2 cursor-pointer hover:text-secondaryTxt border-primaryTxt font-logo text-transparent bg-clip-text bg-gradient-to-bl from-primaryTxt via-primaryTxt to-secondaryTxt">CP</h1>
             </Link>
             {links.map( (link) => (
               <li key={link} className="cursor-pointer py-4 text-2xl hover:text-secondaryTxt hover:scale-110">

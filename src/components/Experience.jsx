@@ -1,28 +1,28 @@
 const Experience = () => {
 
-  const jobs = [
-    {
-      employer: 'Katie Kime',
-      title: 'Intern Software Engineer',
-      from: 'June 2021',
-      to: 'Sept 2021',
-      bullets: []
-    },
-    {
-      employer: 'Pensa Systems',
-      title: 'Manufacturing & Test Engineer',
-      from: 'June 2020',
-      to: 'Oct 2020',
-      bullets: []
-    },
-    {
-      employer: 'U.S. Coast Guard',
-      title: 'Marine Science Technician',
-      from: 'March 2005',
-      to: 'July 2015',
-      bullets: []
-    },
-  ]
+  // const jobs = [
+  //   {
+  //     employer: 'Katie Kime',
+  //     title: 'Intern Software Engineer',
+  //     from: 'June 2021',
+  //     to: 'Sept 2021',
+  //     bullets: []
+  //   },
+  //   {
+  //     employer: 'Pensa Systems',
+  //     title: 'Manufacturing & Test Engineer',
+  //     from: 'June 2020',
+  //     to: 'Oct 2020',
+  //     bullets: []
+  //   },
+  //   {
+  //     employer: 'U.S. Coast Guard',
+  //     title: 'Marine Science Technician',
+  //     from: 'March 2005',
+  //     to: 'July 2015',
+  //     bullets: []
+  //   },
+  // ]
   
   return (
     <div name='experience' className="relative container mx-auto p-6 h-screen max-w-full bg-primary">

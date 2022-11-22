@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const [ nav, setNav ] = useState(false)
   const links = [
-    'about', 'experience', 'projects', 'contact'
+    'about', 'skills', 'projects', 'contact'
   ]
 
   return (

@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="flex items-center mx-auto justify-between max-w-5xl">
         <div>
           <Link to='home' smooth duration={700}>
-            <h1 className="text-4xl px-4 font-logo cursor-pointer hover:scale-105 duration-300 text-transparent bg-clip-text bg-gradient-to-bl from-primaryTxt via-primaryTxt to-secondaryTxt">C.Palmer</h1>
+            <h1 className="text-4xl px-4 font-logo cursor-pointer hover:scale-105 duration-300 text-transparent bg-clip-text bg-gradient-to-bl from-primaryTxt via-primaryTxt to-secondaryTxt">CP</h1>
           </Link>
         </div>
         <ul className="hidden space-x-6 text-primaryTxt md:flex">

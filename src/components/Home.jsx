@@ -1,5 +1,4 @@
 import profileImage from '../assets/profileImg.png'
-const name = process.env.REACT_APP_TEST
 
 const Home = () => {
 
@@ -17,7 +16,7 @@ const Home = () => {
       <div className={homeContainer}>
         <div className={homeContent}>
           <h3 className='text-2xl text-center md:text-left'>Hi, my name is</h3>
-          <h2 className='text-primaryTxt text-center md:text-left font-logo text-7xl py-2'>{name}</h2>
+          <h2 className='text-primaryTxt text-center md:text-left font-logo text-7xl py-2'>Chad Palmer</h2>
           <p className='py-4 pr-9 text-center text-sm md:text-left'>
             I'm a software developer bringing you digital solutions from the beautiful Texas hill country.  I specialize in web applications and development utilizing the latest technologies, and I'm always looking for likeminded developers to grow my experience with!
           </p>

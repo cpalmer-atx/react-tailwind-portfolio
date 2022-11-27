@@ -1,4 +1,4 @@
-import Axios from "axios"
+import axios from "axios";
 import { useState } from "react";
 
 const Contact = () => {
@@ -19,14 +19,16 @@ const Contact = () => {
     setMessage(e.target.value)
   }
 
-  const submitForm = (e) => {
+  const submitForm = async (e) => {
     e.preventDefault();
-    // Sanity check
-    console.log({
+
+    const response = await axios.post('/api/send/', {
       name: name,
       email: email,
-      msg: message
+      msg: <html>{message}</html>
     });
+
+    return response;
   }
 
   return (

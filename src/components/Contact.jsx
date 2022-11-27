@@ -1,24 +1,56 @@
+import Axios from "axios"
+import { useState } from "react";
+
 const Contact = () => {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const updateName = (e) => {
+    setName(e.target.value)
+  }
+
+  const updateEmail = (e) => {
+    setEmail(e.target.value)
+  }
+
+  const updateMessage = (e) => {
+    setMessage(e.target.value)
+  }
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    // Sanity check
+    console.log({
+      name: name,
+      email: email,
+      msg: message
+    });
+  }
+
   return (
     <div name='contact' className="relative container mx-auto p-6 py-72 h-screen max-w-full bg-primary">
       <div className="flex flex-col p-8 justify-center mx-auto h-full max-w-5xl">
         <h1 className="text-primaryTxt mb-4 text-4xl text-center">Contact</h1>
-        {/* <p className="text-secondaryTxt text-2xl pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus atque culpa asperiores. Distinctio laudantium quae facilis voluptatem mollitia numquam error aperiam corrupti delectus sequi sit saepe voluptate neque, autem corporis!</p> */}
         <div className="flex justify-center items-center">
-          <form action="" className="flex flex-col w-full md:w-1/2">
-            <input 
+          <form onSubmit={submitForm} action="" className="flex flex-col w-full md:w-1/2">
+            <input
+              onChange={updateName} 
               type="text"
               name="name"
               placeholder="Enter your name"
               className="p-2 bg-transparent border-2 rounded-md text-secondaryTxt"
             />
-            <input 
+            <input
+              onChange={updateEmail} 
               type="text"
               name="email"
               placeholder="Enter your email"
               className="my-2 p-2 bg-transparent border-2 rounded-md text-secondaryTxt focus:outline-none"
             />
             <textarea
+              onChange={updateMessage}
               name="message"
               placeholder="Enter your message"
               rows="10"

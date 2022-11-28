@@ -25,9 +25,9 @@ const Contact = () => {
     const response = await axios.post('/api/send/', {
       name: name,
       email: email,
-      msg: <html>{message}</html>
+      message: message
     });
-
+    console.log(response);
     return response;
   }
 
@@ -53,6 +53,7 @@ const Contact = () => {
             />
             <textarea
               onChange={updateMessage}
+              type="text"
               name="message"
               placeholder="Enter your message"
               rows="10"

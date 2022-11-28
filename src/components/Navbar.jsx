@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { Link } from "react-scroll"
+import resume from "../assets/resume.pdf"
 
 const Navbar = () => {
 
@@ -25,7 +26,14 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <a href="./" className="hidden md:block p-3 px-6 pt-2 text-secondaryTxt border-2 border-primaryTxt hover:scale-105 hover:border-contrast duration-300 rounded-lg">Résumé</a>
+        <a 
+          href={resume} 
+          download={true} 
+          target='_blank' 
+          rel="noreferrer" 
+          className="hidden md:block p-3 px-6 pt-2 text-secondaryTxt border-2 border-primaryTxt hover:scale-105 hover:border-contrast duration-300 rounded-lg"
+          >Résumé
+        </a>
 
         {/* Hamburger button for mobile screens */}
         <div onClick={ () => setNav(!nav) } className="cursor-pointer pr-2 z-20 text-primaryTxt md:hidden">
@@ -43,7 +51,14 @@ const Navbar = () => {
                 <Link to={link} onClick={() => setNav(!nav)} smooth duration={700}>{link}</Link>
               </li>
             ))}
-            <a href="./" className="p-3 px-16 pt-2 mt-8 text-secondaryTxt border-2 border-primaryTxt hover:scale-105 hover:border-contrast duration-300 rounded-lg">Résumé</a>
+            <a 
+              href={resume} 
+              download={true} 
+              target='_blank' 
+              rel="noreferrer" 
+              className="p-3 px-16 pt-2 mt-8 text-secondaryTxt border-2 border-primaryTxt hover:scale-105 hover:border-contrast duration-300 rounded-lg"
+              >Résumé
+            </a>
           </ul> 
         )}
       </div>

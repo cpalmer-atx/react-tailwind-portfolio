@@ -2,32 +2,29 @@ import axios from "axios";
 import { useState } from "react";
 
 const Contact = () => {
+  const init = { name: '', email: '', message: '' }
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [form, setForm] = useState(init)
 
-  const updateName = (e) => {
-    setName(e.target.value)
-  }
-
-  const updateEmail = (e) => {
-    setEmail(e.target.value)
-  }
-
-  const updateMessage = (e) => {
-    setMessage(e.target.value)
+  const updateForm = (key, e) => {
+    const updatedForm = { ...form }
+    updatedForm[key] = e.target.value;
+    setForm(updatedForm);
   }
 
   const submitForm = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post('/api/send/', {
+    const { name, email, message } = form;
+    const formData = {
       name: name,
       email: email,
       message: message
-    });
-    
+    }
+    setForm(init);
+
+    const res = await axios.post('/api/send/', formData);
+  
     // Temporary alerts for contact form user feedback
     res.status === 200 ? alert('Your message has been sent!') : alert('Message failed to send')
     return res;
@@ -40,24 +37,27 @@ const Contact = () => {
         <div className="flex justify-center items-center">
           <form onSubmit={submitForm} action="" className="flex flex-col w-full md:w-1/2">
             <input
-              onChange={updateName} 
+              onChange={(e) => updateForm("name", e)} 
               type="text"
               name="name"
               placeholder="Enter your name"
+              value={form.name}
               className="p-2 bg-transparent border-2 rounded-md text-secondaryTxt"
             />
             <input
-              onChange={updateEmail} 
+              onChange={(e) => updateForm("email", e)}
               type="text"
               name="email"
               placeholder="Enter your email"
+              value={form.email}
               className="my-2 p-2 bg-transparent border-2 rounded-md text-secondaryTxt focus:outline-none"
             />
             <textarea
-              onChange={updateMessage}
+              onChange={(e) => updateForm("message", e)}
               type="text"
               name="message"
               placeholder="Enter your message"
+              value={form.message}
               rows="10"
               className="p-2 bg-transparent border-2 rounded-md text-secondaryTxt focus:outline-none">
             </textarea>

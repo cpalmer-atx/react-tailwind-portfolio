@@ -22,13 +22,15 @@ const Contact = () => {
   const submitForm = async (e) => {
     e.preventDefault();
 
-    const response = await axios.post('/api/send/', {
+    const res = await axios.post('/api/send/', {
       name: name,
       email: email,
       message: message
     });
-    console.log(response);
-    return response;
+    
+    // Temporary alerts for contact form user feedback
+    res.status === 200 ? alert('Your message has been sent!') : alert('Message failed to send')
+    return res;
   }
 
   return (

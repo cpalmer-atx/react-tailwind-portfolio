@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimalist portfolio for developers built with React",
   "main": "server.js",
   "scripts": {
     "server": "nodemon backend/server.js",
@@ -9,7 +9,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Chad Palmer",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.1",

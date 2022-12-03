@@ -5,7 +5,7 @@ const Projects = () => {
   const projects = [
     {
       src: reactTailwindExpress,
-      demoURL: '',
+      demoURL: 'https://www.cnpalmer.com',
       codeURL: 'https://github.com/cpalmer-atx/react-tailwind-portfolio'
     },
   ]

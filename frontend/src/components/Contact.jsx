@@ -24,9 +24,9 @@ const Contact = () => {
     setForm(init);
 
     const res = await axios.post('/api/send/', formData);
-  
+    
     // Temporary alerts for contact form user feedback
-    res.status === 200 ? alert('Your message has been sent!') : alert('Message failed to send')
+    res.status === 200 ? alert('Your message has been sent (dev)!') : alert('Message failed to send')
     return res;
   }
 

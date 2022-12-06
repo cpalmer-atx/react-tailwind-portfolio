@@ -4,6 +4,12 @@ import { FiMail } from 'react-icons/fi'
 
 const Home = () => {
 
+  const content = {
+    intro: 'Hi, my name is',
+    name: 'Chad Palmer',
+    statement: "I'm a software developer bringing you digital solutions from the beautiful Texas hill country.  I specialize in web applications and development utilizing the latest technologies, and I'm always looking for likeminded developers to grow my experience with!"
+  }
+
   const styles = {
     home: 'relative container mx-auto pt-24 h-screen max-w-full bg-primary',
     homeContainer: 'flex flex-col py-8 px-6 justify-center items-center mx-auto h-full max-w-5xl md:flex-row',
@@ -11,9 +17,12 @@ const Home = () => {
     imageContainer: ' drop-shadow-2xl pt-10',
     profile: 'p-1 mx-auto rounded-tr-3xl rounded-bl-3xl bg-secondaryTxt opacity-75 w-1/2 md:w-full',
     iconContainer: 'flex gap-x-2 justify-center md:justify-start text-3xl',
-    icons: 'cursor-pointer hover:text-primaryTxt hover:scale-105 duration-300'
+    icons: 'cursor-pointer hover:text-primaryTxt hover:scale-105 duration-300',
+    intro: 'text-2xl text-center md:text-left',
+    name: 'text-primaryTxt text-center md:text-left font-logo text-7xl py-2',
+    statement: 'py-4 pr-9 text-center text-sm md:text-left'
   }
-  const { home, homeContainer, homeContent, imageContainer, profile, iconContainer, icons } = styles
+  const { home, homeContainer, homeContent, imageContainer, profile, iconContainer, icons, intro, name, statement } = styles
 
   const iconLinks = [
     {
@@ -42,10 +51,10 @@ const Home = () => {
     <section name='home' className={home}>
       <div className={homeContainer}>
         <div className={homeContent}>
-          <h3 className='text-2xl text-center md:text-left'>Hi, my name is</h3>
-          <h2 className='text-primaryTxt text-center md:text-left font-logo text-7xl py-2'>Chad Palmer</h2>
-          <p className='py-4 pr-9 text-center text-sm md:text-left'>
-            I'm a software developer bringing you digital solutions from the beautiful Texas hill country.  I specialize in web applications and development utilizing the latest technologies, and I'm always looking for likeminded developers to grow my experience with!
+          <h3 className={intro}>{content.intro}</h3>
+          <h2 className={name}>{content.name}</h2>
+          <p className={statement}>
+            {content.statement}
           </p>
           <div className={iconContainer}>
             {iconLinks.map(({id, icon, href}) => (

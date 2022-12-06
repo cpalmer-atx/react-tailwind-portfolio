@@ -52,18 +52,28 @@ const Skills = () => {
     },
   ]
 
+  const styles = {
+    skillsComponent: 'relative container mx-auto p-6 py-80 lg:py-24 h-screen max-w-full bg-primary',
+    skillsContainer: 'mx-auto p-4 flex flex-col justify-center w-full h-full max-w-5xl',
+    header: 'text-primaryTxt text-4xl text-center md:text-left',
+    skillsGrid: 'text-secondaryTxt w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0',
+    skillCard: 'shadow-md hover:scale-105 duration-500 py-2 rounded-lg',
+    cardImg: 'w-20 mx-auto',
+    cardTxt: 'hidden mt-4 md:block'
+  }
+  const { skillsComponent, skillsContainer, header, skillsGrid, skillCard, cardImg, cardTxt } = styles;
+
   return (
-    <div name='skills' className='relative container mx-auto p-6 py-80 lg:py-24 h-screen max-w-full bg-primary'>
-      <div className='mx-auto p-4 flex flex-col justify-center w-full h-full max-w-5xl'>
+    <div name='skills' className={skillsComponent}>
+      <div className={skillsContainer}>
         <div>
-          <h1 className='text-primaryTxt text-4xl text-center md:text-left'>My Technologies</h1>
+          <h1 className={header}>My Technologies</h1>
         </div>
-        <div className='text-secondaryTxt w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
-          {/* Reserved for skill cards */}
+        <div className={skillsGrid}>
           {skills.map(({ src, title, color }) => (
-            <div key={title} className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${color}`}>
-              <img src={src} alt="" className='w-20 mx-auto' />
-              <p className='hidden mt-4 md:block'>{title}</p>
+            <div key={title} className={`${skillCard} ${color}`}>
+              <img src={src} alt="" className={cardImg} />
+              <p className={cardTxt}>{title}</p>
             </div>
           ))}
         </div>

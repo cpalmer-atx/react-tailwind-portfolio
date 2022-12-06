@@ -22,7 +22,10 @@ const Navbar = () => {
     mobileLinks: 'cursor-pointer py-4 text-2xl hover:text-secondaryTxt hover:scale-110',
     mobileBtn: 'p-3 px-16 pt-2 mt-8 text-secondaryTxt border-2 border-primaryTxt hover:scale-105 hover:border-contrast duration-300 rounded-lg'
   }
-  const { navComponent, navContainer, desktopLogo, desktopLinks, desktopLink, desktopBtn, mobileNavBtn, mobileContainer, mobileLogo, mobileLinks, mobileBtn } = styles;
+  const { navComponent, navContainer, desktopLogo, desktopLinks, 
+          desktopLink, desktopBtn, mobileNavBtn, mobileContainer, 
+          mobileLogo, mobileLinks, mobileBtn
+        } = styles;
 
   return (
     // <div className="relative">
